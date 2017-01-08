@@ -1,30 +1,28 @@
-# :nail_care: React/Redux starter :baby_chick:
+# React/Redux starter
 
 The world do not need _another_ boilerplate.
-This is just my starting point for React/Redux applications.
+This is just my personal starting point.
 
-## :fast_forward: tl;dr
+### :fast_forward: tl;dr
 ```js
 yarn install
 npm starter
 ```
 
-### Create React App
-To release all the pain and let Dan Abramov handle the Webpack setup :simple_smile:
+___
 
-[Create React App](https://github.com/facebookincubator/create-react-app)
+### :sparkles: [Create React App](https://github.com/facebookincubator/create-react-app)
+To release all the pain and let Dan Abramov handle the Webpack setup :smile:
 
-### Redux
+___
+
+### :ok_hand: [Redux](https://github.com/reactjs/redux)
 For predictable state and a single source of truth.
+___
 
-[Redux](https://github.com/reactjs/redux)
-
-### Ducks
+### :baby_chick: [Ducks](https://github.com/erikras/ducks-modular-redux)
 A better way to organize reducers, actions and action creators.
+___
 
-[Ducks modular Redux](https://github.com/erikras/ducks-modular-redux)
-
-### Styled components
+### :nail_care: [Styled components](https://github.com/styled-components/styled-components)
 Say goodbye to classnames with visual primitives. It even has autoprefixing!
-
-[Styled components](https://github.com/styled-components/styled-components)
