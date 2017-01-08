@@ -1,27 +1,21 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import { combineReducers } from 'redux';
+import { syncHistoryWithStore } from 'react-router-redux';
+import { browserHistory } from 'react-router';
 
-import todos from './ducks/todos';
-import filters from './ducks/filters';
+// Minimal global styling
+import './styles';
 
-import App from './components/App';
+import createRoutes from './routes';
+import store from './store';
+const history = syncHistoryWithStore(browserHistory, store);
 
-const rootReducer = combineReducers({
-  todos,
-  filters,
-});
-
-const store = createStore(
-  rootReducer,
-  window.devToolsExtension ? window.devToolsExtension() : f => f
-);
+const routes = createRoutes({ history });
 
 render(
   <Provider store={store}>
-    <App />
+    {routes}
   </Provider>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );

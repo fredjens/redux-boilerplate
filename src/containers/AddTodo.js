@@ -15,6 +15,7 @@ class AddTodo extends Component {
 
   submitTodo(event) {
     event.preventDefault();
+    if (this.state.input.length < 3) { return };
     this.props.addTodoItem(this.state.input);
     this.setState({input: ''});
   }
@@ -31,7 +32,10 @@ class AddTodo extends Component {
             value={this.state.input}
             onChange={(e) => this.hanldeInput('input', e)}
           />
-          <button type="submit">
+          <button
+            type="submit"
+            disabled={this.state.input.length < 3}
+          >
             Add Todo
           </button>
         </form>
