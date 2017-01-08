@@ -1,6 +1,7 @@
 # :nail_care: React/Redux starter :baby_chick:
 
-Starter point for React/Redux applications.
+The world do not need _another_ boilerplate.
+This is just my starting point for React/Redux applications.
 
 ## :fast_forward: tl;dr
 ```js

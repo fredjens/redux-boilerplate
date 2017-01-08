@@ -7,7 +7,6 @@ import { setVisibilityFilter } from '../ducks/filters';
 import FilterLink from '../components/FilterLink';
 
 const Filter = (props) => {
-  console.log(props);
   return (
   <div>
     {props.filters.map((filter, index) =>
