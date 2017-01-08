@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Filter from './Filter';
+import Filter from '../containers/Filter';
 import AddTodo from '../containers/AddTodo'
 import TodoList from '../containers/TodoList';
 

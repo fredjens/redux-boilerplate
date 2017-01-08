@@ -8,6 +8,7 @@ import Todo from '../components/Todo';
 import getVisibleTodos from '../utils/getVisibleTodos';
 
 const TodoList = (props) => {
+  console.log(props);
   return (
     <ul>
       {getVisibleTodos(props.todos, props.visibilityFilter).map(todo =>
@@ -24,7 +25,7 @@ const TodoList = (props) => {
 
 const mapStateToProps = (state) => ({
   todos: state.todos,
-  visibilityFilter: state.filters,
+  visibilityFilter: state.filters.active,
 })
 
 const mapDispatchToProps =  (dispatch) => bindActionCreators({
