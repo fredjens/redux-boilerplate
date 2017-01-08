@@ -6,12 +6,12 @@ import AddTodo from '../containers/AddTodo'
 import TodoList from '../containers/TodoList';
 
 const Home = () => (
-  <div>
+  <article>
     <AddTodo />
     <TodoList />
     <Filter />
     <Link to="/about">About</Link>
-  </div>
+  </article>
 )
 
 export default Home;

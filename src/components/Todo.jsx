@@ -1,14 +1,13 @@
 import React from 'react';
+import ToDoItem from '../primitives/ToDoItem';
 
 const Todo = (props) => (
-  <li
+  <ToDoItem
     onClick={props.onClick}
-    style={{
-      textDecoration: props.completed ? 'line-through' : 'none'
-    }}
+    completed={props.completed}
   >
     {props.text}
-  </li>
+  </ToDoItem>
 )
 
 export default Todo;

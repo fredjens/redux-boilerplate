@@ -1,9 +1,9 @@
 import React from 'react';
 
 const App = (props) => (
-  <div>
+  <main>
     {props.children}
-  </div>
+  </main>
 );
 
 export default App;

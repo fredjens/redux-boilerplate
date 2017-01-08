@@ -1,4 +1,5 @@
 import { injectGlobal } from 'styled-components';
+import vars from './variables';
 
 /* eslint-disable */
 
@@ -21,5 +22,10 @@ injectGlobal`
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
     line-height: 1.4;
     font-size: 16px;
+    padding: 2rem;
+  }
+
+  a {
+    color: ${vars.colors.secondary};
   }
 `;

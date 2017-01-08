@@ -6,19 +6,22 @@ import { toggleTodo } from '../ducks/todos';
 
 import Todo from '../components/Todo';
 import getVisibleTodos from '../utils/getVisibleTodos';
+import Ul from '../primitives/Ul';
 
 const TodoList = (props) => {
+  const todos = getVisibleTodos(props.todos, props.visibilityFilter);
+
   return (
-    <ul>
-      {getVisibleTodos(props.todos, props.visibilityFilter).map(todo =>
+    <Ul>
+      {todos.map((todo, index) =>
         <Todo
-          key={todo.id}
+          key={index}
           text={todo.text}
           completed={todo.completed}
           onClick={() => props.toggleTodo(todo.id)}
         />
       )}
-    </ul>
+    </Ul>
   )
 };
 

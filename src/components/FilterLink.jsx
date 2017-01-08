@@ -1,13 +1,16 @@
 import React from 'react';
+import Button from '../primitives/Button';
 
 const FilterLink = (props) => {
   return (
-    <button href="#"
-       onClick={props.onClick}
-       disabled={props.active}
+    <Button
+      small
+      secondary
+      onClick={props.onClick}
+      disabled={props.active}
     >
       {props.children}
-    </button>
+    </Button>
   )
 }
 

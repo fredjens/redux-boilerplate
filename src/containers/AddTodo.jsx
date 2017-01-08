@@ -5,6 +5,9 @@ import autoBind from 'auto-bind';
 
 import { addTodoItem } from '../ducks/todos';
 
+import Button from '../primitives/Button';
+import Input from '../primitives/Input';
+
 class AddTodo extends Component {
   constructor(props) {
     super(props);
@@ -29,16 +32,16 @@ class AddTodo extends Component {
     return (
       <div>
         <form onSubmit={(e) => this.submitTodo(e)}>
-          <input
+          <Input
             value={this.state.input}
             onChange={(e) => this.hanldeInput('input', e)}
           />
-          <button
+          <Button
             type="submit"
             disabled={this.state.input.length < 3}
           >
             Add Todo
-          </button>
+          </Button>
         </form>
       </div>
     )
