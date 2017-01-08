@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { addTodoItem } from '../ducks/todos';
 import autoBind from 'auto-bind';
+
+import { addTodoItem } from '../ducks/todos';
 
 class AddTodo extends Component {
   constructor(props) {
