@@ -9,13 +9,14 @@ import getVisibleTodos from '../utils/getVisibleTodos';
 import Ul from '../primitives/Ul';
 
 const TodoList = (props) => {
-  const todos = getVisibleTodos(props.todos, props.visibilityFilter);
+  const filteredTodos = getVisibleTodos(props.todos, props.visibilityFilter)
+  const reverseTodos = filteredTodos.slice().reverse();
 
   return (
     <Ul>
-      {todos.map((todo, index) =>
+      {reverseTodos.map((todo, index) =>
         <Todo
-          key={index}
+          key={todo.id}
           text={todo.text}
           completed={todo.completed}
           onClick={() => props.toggleTodo(todo.id)}
