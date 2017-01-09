@@ -39,9 +39,10 @@ const todos = (state = deepFreeze([]), action) => {
         if (todo.id !== action.id) {
           return todo
         };
-        return Object.assign({}, todo, {
+        return {
+            ...todo,
            completed : !todo.completed,
-        })
+        };
       });
       return newState;
     default:
